@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     if (login($_POST['email'], $_POST['password'])) {
-        redirect('./dashboard.php');
+        redirect('./index.php');
     }
 
     setMsg('Invalid email or bad password.', 'danger');

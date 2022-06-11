@@ -30,3 +30,13 @@ function login($email, $password)
 
     return $user ? true : false;
 }
+
+function isLoggedIn()
+{
+    return isset($_SESSION['_user']);
+}
+
+function logout()
+{
+    unset($_SESSION['_user']);
+}
