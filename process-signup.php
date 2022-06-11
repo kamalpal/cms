@@ -33,7 +33,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($_POST['password'] !== $_POST['confirm-password']) {
         setMsg('Both password should match.', 'warning');
         redirect('./registration.php');
-
     }
 
     $stmt = $db->prepare("INSERT INTO users (name, email, password) VALUES (:name, :email, :password)");
